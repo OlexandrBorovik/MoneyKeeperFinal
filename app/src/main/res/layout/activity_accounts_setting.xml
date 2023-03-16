@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountsSettingActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/title_back"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/setting_accounts"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+</RelativeLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/accounts_list_setting"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:scrollbarSize="10dp"
+    android:layout_below="@+id/title_bg"
+    />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_below="@+id/accounts_list_setting"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/add_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/add_account"
+
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button_add_account"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:text="@string/add"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/title_bg_down"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/accounts_list_setting"
+        android:layout_marginTop="50dp"
+        android:background="@color/title_back"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/setting_category"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_list_setting"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title_bg_down"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/category_list_setting"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/add_category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/add_category"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/button_add_category"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/add"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_back"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_setting_back"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="130dp"
+            android:layout_weight="1"
+            android:text="Back" />
+    </LinearLayout>
+
+</RelativeLayout>
